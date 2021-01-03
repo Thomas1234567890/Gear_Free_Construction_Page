@@ -1,3 +1,130 @@
-h1, h2 {
-  font-family: Lato;
+@media only screen and (min-width: 550px) {
+    .phoneScreen {
+        display: none;
+    }
+
+    .tabletAndPhoneScreen {
+        display: none;
+    }
+
+    .screens {
+        display: inline;
+    }
+
+    .heading {
+        position: absolute;
+        z-index: 0;
+        margin: 45vh 20vh 20vh 20vh;
+    }
+
+    .loggedInGear {
+        z-index: -1;
+        height: 100vh;
+        position: absolute;
+        -webkit-animation: startingGear 5s;
+        /* Safari 4.0 - 8.0 */
+        animation: startingGear 5s;
+        left: -50vh;
+        color: #E5E5E5;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+
+    .loggedInGear {
+        fill: currentColor;
+    }
+
+    .footer {
+        display: none;
+    }
 }
+
+@media only screen and (max-width: 549px) {
+    body {
+        background-color: #FFFFFF;
+    }
+
+    .phoneScreen {
+        display: none;
+    }
+
+    .tabletAndPhoneScreen {
+        display: inline;
+    }
+
+    .screens {
+        display: none;
+    }
+
+    .heading {
+        position: absolute;
+        z-index: 0;
+        margin: 45vh 0 0 0;
+    }
+
+    .loggedInGear {
+        z-index: -1;
+        height: 90vh;
+        position: absolute;
+        -webkit-animation: startingGear 5s;
+        /* Safari 4.0 - 8.0 */
+        animation: startingGear 5s;
+        left: -50vh;
+        color: #E5E5E5;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+
+    .loggedInGear {
+        fill: currentColor;
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .phoneScreen {
+        display: inline;
+    }
+
+    .tabletAndPhoneScreen {
+        display: none;
+    }
+
+    .screens {
+        display: none;
+    }
+}
+
+
+/*animation*/
+
+@keyframes startingGear {
+    from {
+        transform: rotate(-100deg);
+        left: -100vh;
+    }
+
+    to {
+        transform: rotate(0deg);
+        left: -50vh;
+    }
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes startingGear {
+    from {
+        transform: rotate(-60deg);
+        left: -100vh;
+    }
+
+    to {
+        transform: rotate(0deg);
+        left: -50vh;
+    }
+}
+
+
+/*animation end*/
